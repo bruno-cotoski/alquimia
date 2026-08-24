@@ -13,6 +13,8 @@ Este repositório documenta a criação de um jogo digital em pixel art no Pico8
 
 ## 1. Código
 
+![Início Game](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/1-inicio-game.png)
+
 
 
 ---
