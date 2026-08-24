@@ -1,17 +1,27 @@
-# Laboratório prático de Criação de Retro Game
+# 🧑‍🚀 ALIENS: Void Survivor 👾
 
-Este repositório documenta a criação de um jogo digital em pixel art no Pico8 com suas limitações técnicas. 
-
----
-
-## Tecnologias e Ferramentas Utilizadas
-
-* **Game Engine:** Pico8
-* **Sistema Operacional:** Windows 11
+## 🌌 Sinopse.
+Após uma falha crítica na nave Rocket Star 2, um astronauta fica à deriva na solidão do espaço desconhecido. Quando alienígenas surgem de todos os lados em um ataque brutal, sua única opção é acionar os propulsores de emergência para se esquivar e sobreviver o máximo de tempo possível no vazio.
 
 ---
 
-## 1. Código
+##  📄 Sobre o Jogo
+**ALIENS: Void Survivor** é um jogo de sobrevivência em arena com arte estilo 8-bit, desenvolvido nativamente para o console virtual **PICO-8**. 
+
+###  📌 Destaques
+* **Ação Frenética:** Inimigos aparecem em ondas cada vez mais rápidas com o passar do tempo.
+* **Mecânica de Movimentação:** Troque a direção dos seus propulsores para se esquivar no tempo certo.
+* **Inimigos Variados:** Enfrente diferentes tipos de ameaças alienígenas com padrões de movimento únicos.
+* **Sistema de Pontuação:** Desafie a si mesmo para alcançar o maior tempo de sobrevivência e bater seu próprio recorde!
+
+---
+
+## 🕹️ Controles
+* **Setas (Esquerda / Direita / Cima / Baixo):** Movimentam o astronauta e alteram a direção do sprite.
+* **Tecla Z :** Reinicia o jogo na tela de *Game Over*.
+
+---
+##  ⌨️ Código
 
 ![Início Game](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/1-inicio-game.png)
 
@@ -32,11 +42,11 @@ Este repositório documenta a criação de um jogo digital em pixel art no Pico8
 ![Desenhar Player Colidir](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/9-desenhar-player-colidir.png)
 
 ---
-
-## 2. Simulação de Game Play
+## 💾 Simulação de Game Play
 
 ### Jogo Monsters
 
 **Sinopse:** Jogo estilo retro de .
 
 ![Aliens](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/aliens.gif)
+
