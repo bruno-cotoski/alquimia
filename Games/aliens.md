@@ -37,4 +37,6 @@ Este repositório documenta a criação de um jogo digital em pixel art no Pico8
 
 ### Jogo Monsters
 
-* **Sinopse:** Jogo estilo retro de .
+**Sinopse:** Jogo estilo retro de .
+
+![Aliens](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/aliens.gif)
