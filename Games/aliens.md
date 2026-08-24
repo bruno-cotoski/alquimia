@@ -44,9 +44,5 @@ Após uma falha crítica na nave Rocket Star 2, um astronauta fica à deriva na 
 ---
 ## 💾 Simulação de Game Play
 
-### Jogo Monsters
-
-**Sinopse:** Jogo estilo retro de .
-
 ![Aliens](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/aliens.gif)
 
