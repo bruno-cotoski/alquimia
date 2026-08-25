@@ -3,6 +3,8 @@
 ## 🌌 Sinopse.
 Após uma falha crítica na nave Rocket Star 2, um astronauta fica à deriva na solidão do espaço desconhecido. Quando alienígenas surgem de todos os lados em um ataque brutal, sua única opção é acionar os propulsores de emergência para se esquivar e sobreviver o máximo de tempo possível no vazio.
 
+![Aliens](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/aliens.gif)
+
 ---
 
 ##  📄 Sobre o Jogo
@@ -34,11 +36,6 @@ Após uma falha crítica na nave Rocket Star 2, um astronauta fica à deriva na 
 ![Desenhar Tela](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/8-desenhar-tela.png)
 
 ![Desenhar Player Colidir](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/9-desenhar-player-colidir.png)
-
----
-## 💾 Simulação de Game Play
-
-![Aliens](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/aliens.gif)
 
 ---
 
