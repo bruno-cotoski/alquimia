@@ -15,12 +15,6 @@ Após uma falha crítica na nave Rocket Star 2, um astronauta fica à deriva na 
 * **Sistema de Pontuação:** Desafie a si mesmo para alcançar o maior tempo de sobrevivência e bater seu próprio recorde!
 
 ---
-
-## 🕹️ Controles
-* **Setas (Esquerda / Direita / Cima / Baixo):** Movimentam o astronauta e alteram a direção do sprite.
-* **Tecla Z :** Reinicia o jogo na tela de *Game Over*.
-
----
 ##  ⌨️ Código
 
 ![Início Game](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/1-inicio-game.png)
@@ -46,3 +40,12 @@ Após uma falha crítica na nave Rocket Star 2, um astronauta fica à deriva na 
 
 ![Aliens](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/aliens.gif)
 
+---
+
+## 🕹️ Jogue Agora
+Você pode jogar **ALIENS: Void Survivor** direto no seu navegador:
+
+👉 [**Clique aqui para jogar no Itch.io**](## 🕹️ Jogue Agora
+Você pode jogar **ALIENS: Void Survivor** direto no seu navegador:
+
+👉 [**Clique aqui para jogar no Itch.io**](https://seu-usuario.itch.io/aliens-void-survivor))
