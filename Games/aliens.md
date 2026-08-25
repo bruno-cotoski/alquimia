@@ -45,4 +45,4 @@ Após uma falha crítica na nave Rocket Star 2, um astronauta fica à deriva na 
 ## 🕹️ Jogue Agora
 Você pode jogar **ALIENS: Void Survivor** direto no seu navegador:
 
-👉 [**Clique aqui para jogar no Itch.io**](https://bruno-cotoski.itch.io/aliens-void-survivor))
+👉 [**Clique aqui para jogar no Itch.io**](https://bruno-cotoski.itch.io/aliens-void-survivor?secret=D7uvCW5qioT2PdvwTPxNVdOOWQ))
