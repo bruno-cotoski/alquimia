@@ -3,7 +3,7 @@
 ## 🌌 Sinopse.
 Após uma falha crítica na nave Rocket Star 2, um astronauta fica à deriva na solidão do espaço desconhecido. Quando alienígenas surgem de todos os lados em um ataque brutal, sua única opção é acionar os propulsores de emergência para se esquivar e sobreviver o máximo de tempo possível no vazio.
 
-![Aliens](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/aliens.gif)
+![GIF Aliens](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/GIF-alien.gif)
 
 ---
 
@@ -19,23 +19,15 @@ Após uma falha crítica na nave Rocket Star 2, um astronauta fica à deriva na 
 ---
 ##  ⌨️ Código
 
-![Início Game](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/1-inicio-game.png)
+![Code 1](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/code-1.png)
 
-![Restart Atualizar](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/2-restart-atualizar.png)
+![Code 2](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/code-2.png)
 
-![Velocidade Nível](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/3-velocidade-nivel.png)
+![Code 3](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/code-3.png)
 
-![Spawn](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/4-spawn.png)
+![Code 4](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/code-4.png)
 
-![Movimento Inimigo](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/5-movimento%20inimigo.png)
 
-![Movimento Player](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/6-movimento-player.png)
-
-![Delimitar Tela](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/7-delimitar-tela.png)
-
-![Desenhar Tela](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/8-desenhar-tela.png)
-
-![Desenhar Player Colidir](https://github.com/bruno-cotoski/alquimia/blob/main/Games/pictures/9-desenhar-player-colidir.png)
 
 ---
 
