@@ -8,7 +8,7 @@ Após uma falha crítica na nave Rocket Star 2, um astronauta fica à deriva na 
 ---
 
 ##  📄 Sobre o Jogo
-**ALIENS: Void Survivor** é um jogo de sobrevivência em arena com arte estilo 8-bit, desenvolvido nativamente para o console virtual **PICO-8**. 
+**ALIENS: Void Survivor** é um jogo de sobrevivência em arena com arte estilo 8-bit, desenvolvido nativamente para o console virtual **PICO-8 *Fantasy Console***. 
 
 ###  📌 Destaques
 * **Ação Frenética:** Inimigos aparecem em ondas cada vez mais rápidas com o passar do tempo.
