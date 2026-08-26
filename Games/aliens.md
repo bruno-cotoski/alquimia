@@ -31,7 +31,17 @@ Após uma falha crítica na nave Rocket Star 2, um astronauta fica à deriva na 
 
 ---
 
+## 🤖 Uso de Inteligência Artificial no Projeto
+
+Este projeto foi idealizado, projetado e desenvolvido por mim. Utilizei ferramentas de IA de forma estratégica durante o processo de desenvolvimento para otimizar a produtividade: 
+
+- **Código:** A IA atuou como assistente na refatoração de blocos de código. A lógica principal, mecânicas e integração permanecem de minha autoria. 
+- **Background:** A IA auxiliou no desenvolvimento dos algoritmos e matemática para a renderização do fundo (sistema de estrelas em pixel art com movimento dinâmico).
+
+***
+
 ## 🕹️ Jogue Agora
+
 Você pode jogar **ALIENS: Void Survivor** direto no seu navegador:
 
 👉 [**Clique aqui para jogar no Itch.io**](https://bruno-cotoski.itch.io/aliens-void-survivor))
