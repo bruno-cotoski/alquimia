@@ -1,7 +1,6 @@
 # 🛠️ Laboratório Prático: Resolução de Problemas de Rede no Windows (CMD)
 
-**Autor:** Bruno Daniel Carvalho Cotoski  
-**Objetivo:** Simular, diagnosticar e solucionar os problemas mais frequentes de conectividade de rede em ambientes corporativos e de Help Desk utilizando o Prompt de Comando (CMD) do Windows.
+**Objetivo:** Simular, diagnosticar e solucionar os problemas mais frequentes de conectividade de rede em ambientes corporativos utilizando o Prompt de Comando (CMD) do Windows.
 
 ---
 
@@ -10,8 +9,8 @@
 | Cenário | Sintoma Relatado | Causa Raiz | Comando Principal |
 | :--- | :--- | :--- | :--- |
 | **01** | Sem acesso à internet / IP inválido (APIPA) | Falha na atribuição via DHCP | `ipconfig /renew` |
-| **02** | Programas conectam, mas sites não abrem | Falha / Cache corrompido de DNS | `ipconfig /flushdns` |
-| **03** | Lentidão e interrupção na conexão local | Perda de pacotes na rede local / Gateway | `ping -t [IP]` |
+| **02** | Programas conectam, mas sites não abrem | Falha no cache corrompido de DNS | `ipconfig /flushdns` |
+| **03** | Lentidão e interrupção na conexão local | Falha na perda de pacotes na rede local / Gateway | `ping -t [IP]` |
 | **04** | Conexão caindo no acesso a servidores externos | Falha de rota em nó intermediário | `tracert [Host]` |
 
 ---
