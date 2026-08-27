@@ -1,13 +1,13 @@
-# 🛠️ Guia Prático de Diagnóstico de Redes no Windows (Help Desk N1)
+# 🪛 Guia Prático de Diagnóstico de Redes no Windows 
 
-**Objetivo:** Documentação prática dos comandos essenciais de linha de comando (CLI) do Windows para diagnóstico e resolução de problemas de conectividade em ambientes de Suporte Técnico.
+**Objetivo:** Documentação de estudo dos comandos essenciais de linha de comando (CLI) no Windows CMD para diagnóstico e resolução de problemas de conectividade.
 
 ---
 
 ## 📌 Comandos Essenciais e Aplicação Prática
 
 ### 1. Identificação de Endereçamento IP (`ipconfig`)
-Utilizado para verificar a configuração atual da placa de rede, garantindo que o dispositivo recebeu um IP válido via DHCP e identificando o IP do Roteador/Gateway.
+Utilizado para verificar a configuração em tempo real da placa de rede, verificando se o dispositivo recebeu um IP válido pelo DHCP e identificando o IP do Gateway.
 
 ```cmd
 ipconfig
@@ -17,7 +17,7 @@ ipconfig
 
 ### 2. Teste de Conectividade Básica (`ping`)
 
-Disparo de pacotes ICMP para testar se há comunicação física com um servidor externo direto via IP, descartando problemas de resolução de nomes.
+Disparo de pacotes ICMP para testar se existe comunicação física com um servidor externo direto pelo IP, desconsiderando problemas de resolução de nomes.
 
 ```cmd
 ping 8.8.8.8
@@ -27,7 +27,7 @@ ping 8.8.8.8
 
 ### 3. Validação do Serviço de DNS (`ping [domínio]`)
 
-Utilizado para testar se o servidor DNS configurado está traduzindo URLs amigáveis em endereços IP válidos na rede.
+Utilizado para testar se o servidor DNS configurado está traduzindo a URL amigável em linguagem humana em endereço IP válido.
 
 ```cmd
 ping google.com
@@ -37,7 +37,7 @@ ping google.com
 
 ### 4. Rastreamento de Saltos e Latência (`tracert`)
 
-Mapeamento de toda a rota percorrida pelo pacote até o destino para identificar exatamente em qual ponto/roteador ocorre lentidão ou interrupção de sinal.
+Mapeamento da rota total percorrida pelo pacote até o destino para identificar especificamente qual ponto/roteador ocorre lentidão ou interrupção de sinal.
 
 ```cmd
 tracert 1.1.1.1
@@ -47,29 +47,29 @@ tracert 1.1.1.1
 
 ---
 
-## 📌 Matriz de Resolução de Problemas (Troubleshooting N1)
+## 📌 Matriz de Resolução de Problemas (Troubleshooting)
 
 ### Caso 1: "A internet não funciona em nenhum site"
 
-- **Diagnóstico:** Executa-se `ipconfig` e observa-se o IP `169.254.X.X` (APIPA).
-- **Causa:** O computador não conseguiu comunicação com o servidor DHCP do roteador.
+- **Diagnóstico:** Executa o `ipconfig` e observa o IP `169.254.X.X` (APIPA).
+- **Causa:** O computador não conseguiu se comunicar com o servidor DHCP do roteador.
 - **Ação do Suporte:** Reiniciar o adaptador de rede ou renovar o IP com os comandos `ipconfig /release` e `ipconfig /renew`.
 
 ### Caso 2: "O WhatsApp Web funciona, mas os sites não abrem no navegador"
 
-- **Diagnóstico:** Executa-se `ping 8.8.8.8` (responde com sucesso) e em seguida `ping google.com` (falha na conexão).
+- **Diagnóstico:** Executa o comando  `ping 8.8.8.8` (responde com sucesso) e em seguida `ping google.com` (falha na conexão).
 - **Causa:** Falha de resolução de nomes (Servidor DNS fora do ar ou incorreto na máquina).
 - **Ação do Suporte:** Alterar o DNS da placa de rede para o IP público do Google (`8.8.8.8`).
 
 ### Caso 3: "O sistema da empresa está muito lento hoje"
 
-- **Diagnóstico:** Executa-se o `tracert 1.1.1.1` e nota-se tempo de resposta elevado nos primeiros saltos.
+- **Diagnóstico:** Executa o `tracert 1.1.1.1` e verifica o tempo de resposta elevado nos primeiros saltos.
 - **Causa:** Congestionamento no roteador local ou na rede da operadora.
-- **Ação do Suporte:** Identificar em qual salto ocorreu a oscilação de latência para isolar se a falha é interna ou da operadora de internet.
+- **Ação do Suporte:** Identificar em qual salto ocorreu a oscilação de latência para isolar o problema identificando se é falha interna ou da operadora de internet.
 
 ## 💡 Conclusão
 
-Este fluxo sequencial permite isolar falhas de rede no atendimento ao cliente em menos de 2 minutos:
+Este fluxo permite isolar falhas de rede no atendimento ao cliente com maior eficiência de tempo:
 
 1. `ipconfig` valida a placa local.
 2. `ping [IP]` valida o link físico e internet.
