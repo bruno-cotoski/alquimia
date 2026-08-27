@@ -13,7 +13,7 @@ Utilizado para verificar a configuração atual da placa de rede, garantindo que
 ipconfig
 ```
 
-![](C:\Users\PC\Desktop\Redes\01-ipconfig.png)
+![ipconfig](https://github.com/bruno-cotoski/alquimia/blob/main/Help-Desk/pictures/Redes-01-ipconfig.png)
 
 ### 2. Teste de Conectividade Básica (`ping`)
 
@@ -23,7 +23,7 @@ Disparo de pacotes ICMP para testar se há comunicação física com um servidor
 ping 8.8.8.8
 ```
 
-![](C:\Users\PC\Desktop\Redes\02-ping-ip.png)
+![ping](https://github.com/bruno-cotoski/alquimia/blob/main/Help-Desk/pictures/Redes-02-ping-ip.png)
 
 ### 3. Validação do Serviço de DNS (`ping [domínio]`)
 
@@ -33,7 +33,7 @@ Utilizado para testar se o servidor DNS configurado está traduzindo URLs amigá
 ping google.com
 ```
 
-![](C:\Users\PC\Desktop\Redes\03-ping-dns.png)
+![DNS](https://github.com/bruno-cotoski/alquimia/blob/main/Help-Desk/pictures/Redes-03-ping-dns.png)
 
 ### 4. Rastreamento de Saltos e Latência (`tracert`)
 
@@ -43,7 +43,7 @@ Mapeamento de toda a rota percorrida pelo pacote até o destino para identificar
 tracert 1.1.1.1
 ```
 
-![](C:\Users\PC\Desktop\Redes\04-tracert.png)
+![tracert](https://github.com/bruno-cotoski/alquimia/blob/main/Help-Desk/pictures/Redes-04-tracert.png)
 
 ---
 
