@@ -1,138 +1,77 @@
-# 🛠️ Laboratório Prático: Resolução de Problemas de Rede no Windows (CMD)
+# 🛠️ Guia Prático de Diagnóstico de Redes no Windows (Help Desk N1)
 
-**Objetivo:** Simular, diagnosticar e solucionar os problemas mais frequentes de conectividade de rede em ambientes corporativos utilizando o Prompt de Comando (CMD) do Windows.
-
----
-
-## 📋 Visão Geral dos Cenários
-
-| Cenário | Sintoma Relatado | Causa Raiz | Comando Principal |
-| :--- | :--- | :--- | :--- |
-| **01** | Sem acesso à internet / IP inválido (APIPA) | Falha na atribuição via DHCP | `ipconfig /renew` |
-| **02** | Programas conectam, mas sites não abrem | Falha no cache corrompido de DNS | `ipconfig /flushdns` |
-| **03** | Lentidão e interrupção na conexão local | Falha na perda de pacotes na rede local / Gateway | `ping -t [IP]` |
-| **04** | Conexão caindo no acesso a servidores externos | Falha de rota em nó intermediário | `tracert [Host]` |
+**Objetivo:** Documentação prática dos comandos essenciais de linha de comando (CLI) do Windows para diagnóstico e resolução de problemas de conectividade em ambientes de Suporte Técnico.
 
 ---
 
-## 🛠️ Cenários Práticos de Atendimento
+## 📌 Comandos Essenciais e Aplicação Prática
 
-### Cenário 1: Falha na Obtenção de IP (DHCP & APIPA)
-**Sintoma:** O usuário informa que o computador está conectado via cabo, mas não consegue acessar nenhum recurso interno ou externo.
-
-#### 1. Diagnóstico Inicial:
-Ao rodar o comando `ipconfig`, verificou-se que a placa de rede recebeu um endereço no bloco `169.254.x.x` (APIPA), indicando que o servidor DHCP não respondeu a tempo.
+### 1. Identificação de Endereçamento IP (`ipconfig`)
+Utilizado para verificar a configuração atual da placa de rede, garantindo que o dispositivo recebeu um IP válido via DHCP e identificando o IP do Roteador/Gateway.
 
 ```cmd
-C:\Users\Bruno> ipconfig
-
-Adaptador Ethernet Ethernet0:
-   Sufixo DNS específico de conexão. . . : 
-   Endereço IPv4 de Configuração Automática. . . : 169.254.45.12
-   Máscara de Sub-rede . . . . . . . . . . . . . : 255.255.0.0
-   Gateway Padrão. . . . . . . . . . . . . . . . : 
+ipconfig
 ```
 
-![Diagnóstico Cenário 1](img/cenario1-diagnostico.png)
+![](C:\Users\PC\Desktop\Redes\01-ipconfig.png)
 
-#### 2. Resolução:
-Executada a liberação do endereço IP temporário e solicitada uma nova concessão ao servidor DHCP da rede local.
+### 2. Teste de Conectividade Básica (`ping`)
+
+Disparo de pacotes ICMP para testar se há comunicação física com um servidor externo direto via IP, descartando problemas de resolução de nomes.
 
 ```cmd
-C:\Users\Bruno> ipconfig /release
-C:\Users\Bruno> ipconfig /renew
-
-Adaptador Ethernet Ethernet0:
-   Endereço IPv4. . . . . . . . . . . . . . . . . : 192.168.1.105
-   Máscara de Sub-rede . . . . . . . . . . . . . : 255.255.255.0
-   Gateway Padrão. . . . . . . . . . . . . . . . : 192.168.1.1
+ping 8.8.8.8
 ```
 
-![Solução Cenário 1](img/cenario1-solucao.png)
+![](C:\Users\PC\Desktop\Redes\02-ping-ip.png)
+
+### 3. Validação do Serviço de DNS (`ping [domínio]`)
+
+Utilizado para testar se o servidor DNS configurado está traduzindo URLs amigáveis em endereços IP válidos na rede.
+
+```cmd
+ping google.com
+```
+
+![](C:\Users\PC\Desktop\Redes\03-ping-dns.png)
+
+### 4. Rastreamento de Saltos e Latência (`tracert`)
+
+Mapeamento de toda a rota percorrida pelo pacote até o destino para identificar exatamente em qual ponto/roteador ocorre lentidão ou interrupção de sinal.
+
+```cmd
+tracert 1.1.1.1
+```
+
+![](C:\Users\PC\Desktop\Redes\04-tracert.png)
 
 ---
 
-### Cenário 2: Falha de Resolução de Nomes (DNS Cache)
-**Sintoma:** O usuário relata que consegue usar o aplicativo do Teams/Discord, mas os navegadores exibem a mensagem "Não foi possível encontrar o endereço IP do servidor".
+## 📌 Matriz de Resolução de Problemas (Troubleshooting N1)
 
-#### 1. Diagnóstico Inicial:
-Teste de conectividade por IP direto (ex: `8.8.8.8`) respondeu com sucesso, porém o teste por nome de domínio (ex: `google.com`) falhou, confirmando problema exclusivo na camada de resolução de nomes (DNS).
+### Caso 1: "A internet não funciona em nenhum site"
 
-```cmd
-C:\Users\Bruno> ping 8.8.8.8
-Resposta de 8.8.8.8: bytes=32 tempo=15ms TTL=117
+- **Diagnóstico:** Executa-se `ipconfig` e observa-se o IP `169.254.X.X` (APIPA).
+- **Causa:** O computador não conseguiu comunicação com o servidor DHCP do roteador.
+- **Ação do Suporte:** Reiniciar o adaptador de rede ou renovar o IP com os comandos `ipconfig /release` e `ipconfig /renew`.
 
-C:\Users\Bruno> ping google.com
-A solicitação de ping não pôde encontrar o host google.com. Verifique o nome e tente novamente.
-```
+### Caso 2: "O WhatsApp Web funciona, mas os sites não abrem no navegador"
 
-![Diagnóstico Cenário 2](img/cenario2-diagnostico.png)
+- **Diagnóstico:** Executa-se `ping 8.8.8.8` (responde com sucesso) e em seguida `ping google.com` (falha na conexão).
+- **Causa:** Falha de resolução de nomes (Servidor DNS fora do ar ou incorreto na máquina).
+- **Ação do Suporte:** Alterar o DNS da placa de rede para o IP público do Google (`8.8.8.8`).
 
-#### 2. Resolução:
-Limpeza do cache do resolvedor DNS local para eliminar registros corrompidos ou obsoletos.
+### Caso 3: "O sistema da empresa está muito lento hoje"
 
-```cmd
-C:\Users\Bruno> ipconfig /flushdns
+- **Diagnóstico:** Executa-se o `tracert 1.1.1.1` e nota-se tempo de resposta elevado nos primeiros saltos.
+- **Causa:** Congestionamento no roteador local ou na rede da operadora.
+- **Ação do Suporte:** Identificar em qual salto ocorreu a oscilação de latência para isolar se a falha é interna ou da operadora de internet.
 
-Configuração do IP do Windows
-Liberação do Cache do Resolver do DNS bem-sucedida.
-```
+## 💡 Conclusão
 
-![Solução Cenário 2](img/cenario2-solucao.png)
+Este fluxo sequencial permite isolar falhas de rede no atendimento ao cliente em menos de 2 minutos:
 
----
-
-### Cenário 3: Diagnóstico de Instabilidade e Perda de Pacotes (ICMP)
-**Sintoma:** A aplicação interna da empresa desconecta intermitentemente ao longo do dia.
-
-#### 1. Diagnóstico Inicial:
-Disparo de teste contínuo de conectividade contra o Gateway Padrão (roteador da rede local) para identificar perdas na camada física ou sobrecarga de equipamentos.
-
-```cmd
-C:\Users\Bruno> ping -t 192.168.1.1
-
-Resposta de 192.168.1.1: bytes=32 tempo=2ms TTL=64
-Esgotado o tempo limite da solicitação.
-Resposta de 192.168.1.1: bytes=32 tempo=150ms TTL=64
-Resposta de 192.168.1.1: bytes=32 tempo=1ms TTL=64
-
-Estatísticas do Ping para 192.168.1.1:
-    Pacotes: Enviados = 10, Recebidos = 9, Perdidos = 1 (10% de perda)
-```
-
-![Diagnóstico Cenário 3](img/cenario3-diagnostico.png)
-
-#### 2. Ação Corretiva:
-Identificada oscilação física na porta de rede/cabo patch cord. Recomenda-se a troca do cabo e validação de porta no Switch de distribuição.
-
----
-
-### Cenário 4: Rastreamento de Rota de Conexão (Tracert)
-**Sintoma:** O usuário não consegue acessar o servidor em nuvem da empresa.
-
-#### 1. Diagnóstico:
-Mapeamento de todos os saltos (roteadores intermediários) percorridos pelos pacotes até o destino final.
-
-```cmd
-C:\Users\Bruno> tracert 1.1.1.1
-
-Rastreando a rota para one.one.one.one [1.1.1.1]
-com no máximo 30 saltos:
-
-  1    1 ms    1 ms    1 ms  192.168.1.1
-  2   10 ms    9 ms   12 ms  10.200.0.1
-  3    *       *       *     Esgotado o tempo limite da solicitação.
-  4    *       *       *     Esgotado o tempo limite da solicitação.
-```
-
-![Diagnóstico Cenário 4](img/cenario4-diagnostico.png)
-
-#### 2. Análise de Suporte:
-O rastreamento comprovou que a comunicação sai da rede local (salto 1 e 2), mas é bloqueada no link do provedor/link externo, descartando problema de hardware no computador do usuário final.
-
----
-
-## 🚀 Conclusão e Aprendizados
-* A utilização combinada de `ipconfig`, `ping` e `tracert` permite isolar falhas de rede em poucos minutos.
-* Distinguir problemas de camadas (Física, IP e DNS) evita chamados desnecessários a fornecedores externos.
-* A documentação sistemática de incidentes otimiza o tempo de atendimento em equipes de Help Desk N1/N2.
+1. `ipconfig` valida a placa local.
+2. `ping [IP]` valida o link físico e internet.
+3. `ping [Domínio]` valida o serviço de DNS.
+4. `tracert` isola falhas em rotas externas.
